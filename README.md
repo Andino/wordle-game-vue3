@@ -1,75 +1,15 @@
-# Nuxt 3 Minimal Starter
-
+# Wordle Game - Nuxt 3
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Instructions
+**Demo:** https://www.loom.com/share/ca47fb091d92445d9231e9a0fec71bdf
+**Instrucciones:** Solo tienes 6 intentos para comprobar la palabra, las casillas marcadas en  🟩 significan que tienen la letra en la posicion correcta, y las letras marcadas en 🟨 son aquellas que pertenecen a la palabra pero que no estan en el orden correcto.
 ## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
+Para ejecutar el projecto necesitamos ejecutar los siguientes comandos:
+```
+//Install dependencies
 yarn install
 
-# bun
-bun install
+//Start the development server on `http://localhost:3000`:
+yarn dev -o
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
