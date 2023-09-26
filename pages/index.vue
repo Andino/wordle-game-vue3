@@ -54,14 +54,18 @@ export default {
             const current_chars = this.values[this.current_iteration]
             let asserts = 0
             let expected_indexes = Array();
+            // We fetch the chars for the current iteration
             current_chars.forEach((element, current_index) => {
                 const current_word = element.toUpperCase();
                 const target = document.getElementById(`input${this.current_iteration}${current_index}`);
                 
+                // We verificate if the current char is included in the word, if so, we get the indexes
                 let counter=-1;
                 while ((counter = this.word.indexOf(current_word, counter+1)) != -1){
                     expected_indexes.push(counter);
                 }
+                // If the index match with the index of the char in the word. We mark the input as green - success
+                // If not, we mark the input as yellow - wrong index
                 if(expected_indexes.includes(current_index)){
                     target.classList.add("bg-green-200");
                     asserts++;
@@ -71,6 +75,7 @@ export default {
                 expected_indexes = Array();
             });
 
+            // We decide wich message is going to be displayed if the game is finished. Also we verify if we should continue
             if(asserts == this.dimensiones.col){
                 this.endGame("Juego Terminado, has encontrado la palabra!")
             } else if(this.current_iteration == 5){
